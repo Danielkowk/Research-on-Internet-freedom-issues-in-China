@@ -1,0 +1,1708 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国互联网跨境信息管理政策深度研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script>
+        // Tailwind配置
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129',
+                        light: '#FFFFFF',
+                        accent: '#722ED1'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .bg-glass {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(8px);
+            }
+            .section-fade {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .section-fade.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-neutral text-dark font-sans">
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 z-50 bg-glass border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fa fa-globe text-primary text-2xl mr-3"></i>
+                    <h1 class="text-xl font-bold text-primary hidden sm:block">中国互联网跨境信息管理政策研究</h1>
+                    <h1 class="text-lg font-bold text-primary sm:hidden">网络政策研究</h1>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#intro" class="text-gray-600 hover:text-primary transition-colors duration-300">引言</a>
+                    <a href="#history" class="text-gray-600 hover:text-primary transition-colors duration-300">历史演变</a>
+                    <a href="#analysis" class="text-gray-600 hover:text-primary transition-colors duration-300">多维度分析</a>
+                    <a href="#opinions" class="text-gray-600 hover:text-primary transition-colors duration-300">各方观点</a>
+                    <a href="#debate" class="text-gray-600 hover:text-primary transition-colors duration-300">辩论环节</a>
+                    <a href="#data" class="text-gray-600 hover:text-primary transition-colors duration-300">数据案例</a>
+                    <a href="#conclusion" class="text-gray-600 hover:text-primary transition-colors duration-300">结语</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-gray-600 hover:text-primary">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="container mx-auto px-4 py-3 space-y-2">
+                <a href="#intro" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">引言</a>
+                <a href="#history" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">历史演变</a>
+                <a href="#analysis" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">多维度分析</a>
+                <a href="#opinions" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">各方观点</a>
+                <a href="#debate" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">辩论环节</a>
+                <a href="#data" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">数据案例</a>
+                <a href="#conclusion" class="block py-2 text-gray-600 hover:text-primary transition-colors duration-300">结语</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 引言部分 -->
+        <section id="intro" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-info text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">引言：理性看待中国互联网管理政策</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700">
+                    <p class="mb-4">基于对中国互联网跨境信息管理政策的深度研究需求，本文从多个维度全面分析这一复杂议题。首先需要澄清一个重要概念：中国并非"无法做到开放外网"，而是基于国家安全、社会公共利益和公民合法权益，对互联网实行<span class="font-semibold text-primary">依法管理</span>。</p>
+                    <p>这种管理模式是世界各国的通行做法，中国的政策本质上是维护网络空间秩序的必要举措，符合国际惯例。接下来，将从历史演变、多维度分析、各方观点等角度，呈现一场理性的"辩论赛"，帮助读者全面理解中国互联网管理政策的背景、内容和意义。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 历史演变部分 -->
+        <section id="history" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-history text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">一、历史演变：从接入到管理的渐进之路</h2>
+                </div>
+
+                <!-- 时间线导航 -->
+                <div class="relative mb-8">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-between">
+                        <button class="timeline-btn active px-4 py-2 text-sm font-medium rounded-full bg-primary text-white" data-target="phase1">1994-2000</button>
+                        <button class="timeline-btn px-4 py-2 text-sm font-medium rounded-full bg-gray-200 text-gray-600" data-target="phase2">2001-2010</button>
+                        <button class="timeline-btn px-4 py-2 text-sm font-medium rounded-full bg-gray-200 text-gray-600" data-target="phase3">2011-至今</button>
+                        <button class="timeline-btn px-4 py-2 text-sm font-medium rounded-full bg-gray-200 text-gray-600" data-target="logic">演变逻辑</button>
+                    </div>
+                </div>
+
+                <!-- 时间线内容 -->
+                <div class="timeline-content" id="phase1">
+                    <h3 class="text-xl font-bold mb-4 text-primary">1.1 改革开放初期的探索阶段（1994-2000年）</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">中国互联网发展的起点可以追溯到1994年4月20日。这一天，在国务院的明确支持下，连接着数百台主机的中关村地区教育与科研示范网络工程通过64K国际专线正式接入国际互联网，中国成为接入国际互联网的第77个国家。</p>
+                        <p class="mb-4">这一时期的中国互联网管理呈现出<span class="font-semibold">探索性特征</span>。1994年，国务院发布《中华人民共和国计算机信息系统安全保护条例》，成为我国网络信息安全领域的首部行政法规。1996年，我国出台首个互联网管理法规《中华人民共和国计算机信息网络国际联网管理暂行规定》，确立了互联网治理制度的基本框架。</p>
+                        <p>值得注意的是，这一阶段中国的网络管理政策主要集中在网络安全领域。根据统计，1994年至1999年间，中国共颁布、实施网络政策18项，其中关于网络技术标准、安全等与国际网络对接有关的政策有11项，占61.1%；网络基础建设和网络发展政策5项，占27.8%。这表明<span class="font-semibold">此时主要任务是确保网络信息安全和网络技术标准构建</span>。</p>
+                    </div>
+                    
+                    <!-- 政策数量图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">1994-1999年中国网络政策分布</h4>
+                        <div class="h-64">
+                            <canvas id="policyChart1"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content hidden" id="phase2">
+                    <h3 class="text-xl font-bold mb-4 text-primary">1.2 规范化管理阶段（2001-2010年）</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">进入21世纪，中国互联网管理进入了一个新的发展阶段。2000年，第九届全国人大常委会第十九次会议通过《全国人民代表大会常务委员会关于维护互联网安全的决定》，这是我国第一个维护网络安全的法律决定。同年，《互联网信息服务管理办法》确立了分类管理制度。</p>
+                        <p class="mb-4">2001年8月，中央重新组建国家信息化领导小组，并在国务院设办事机构"国务院信息化工作办公室"，这一专门机构标志着我国独立网络治理机制的探索。2002年11月15日，《互联网上网服务营业场所管理条例》施行，明确了互联网上网服务营业场所经营单位的设立与经营要求、法律责任等。</p>
+                        <p>这一阶段的政策数量显著增加。2001年至2010年间，中国共出台网络政策125项，是上一阶段的7倍，其中安全领域政策79项，占比约62.7%；发展领域政策46项，占比约37.3%。<span class="font-semibold">安全仍然是主导因素</span>，但发展需求开始显现。</p>
+                    </div>
+                    
+                    <!-- 政策数量对比图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">2001-2010年中国网络政策分布</h4>
+                        <div class="h-64">
+                            <canvas id="policyChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content hidden" id="phase3">
+                    <h3 class="text-xl font-bold mb-4 text-primary">1.3 法治化建设阶段（2011年至今）</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">2011年以来，中国互联网管理进入了法治化、体系化的新阶段。2011年5月，国家互联网信息办公室成立，标志着网络管理和决策的核心机制建立。2014年2月27日，中央网络安全和信息化领导小组（后改为委员会）成立，习近平总书记首次提出"努力把我国建设成为网络强国"的目标愿景。</p>
+                        <p class="mb-4">2016年11月7日，全国人大常委会表决通过了《中华人民共和国网络安全法》，自2017年6月1日起施行。这是我国网络安全领域的首部基础性、框架性、综合性法律，标志着我国网络空间领域的发展和现代化治理迈出了坚实一步。</p>
+                        <p class="mb-4"><span class="font-semibold">近十年来，中国的网络立法呈现出爆发式增长</span>。2011年至2020年间，中国共出台各级别网络政策300项，其中经济和社会发展类政策221项，占比超74%。2021年，《中华人民共和国数据安全法》和《中华人民共和国个人信息保护法》相继实施，形成了"网络安全-数据安全-个人信息保护"三位一体的法律框架。</p>
+                        <p>2024年8月30日，《网络数据安全管理条例》经国务院第40次常务会议通过，自2025年1月1日起施行。2024年3月22日，《促进和规范数据跨境流动规定》正式实施，明确了国际贸易、跨境运输、学术合作等活动中不包含个人信息或重要数据的，免予申报数据出境安全评估。</p>
+                    </div>
+                    
+                    <!-- 法律框架图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">中国网络安全法律框架演进</h4>
+                        <div class="h-64">
+                            <canvas id="legalFrameworkChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content hidden" id="logic">
+                    <h3 class="text-xl font-bold mb-4 text-primary">1.4 政策演变的内在逻辑</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">从改革开放以来的历史演变可以看出，中国互联网管理政策呈现出<span class="font-semibold">三个明显特征</span>：</p>
+                        <div class="space-y-4">
+                            <div class="bg-primary/5 p-4 rounded-lg">
+                                <p class="font-semibold text-primary">第一，从技术导向到安全导向再到发展与安全并重</p>
+                                <p>早期主要关注技术标准和网络接入，中期重点转向网络安全防护，近年来则强调在保障安全的前提下促进发展。</p>
+                            </div>
+                            <div class="bg-primary/5 p-4 rounded-lg">
+                                <p class="font-semibold text-primary">第二，从分散管理到集中管理再到统筹协调</p>
+                                <p>管理机构经历了从无到有、从分散到集中的过程，体现了对网络治理复杂性认识的不断深化。</p>
+                            </div>
+                            <div class="bg-primary/5 p-4 rounded-lg">
+                                <p class="font-semibold text-primary">第三，从粗放到精细、从单一到体系</p>
+                                <p>法律法规从简单的管理办法发展为完整的法律体系，涵盖了网络安全、数据安全、个人信息保护等各个方面。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 多维度分析部分 -->
+        <section id="analysis" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-sitemap text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">二、多维度分析：中国互联网管理的必要性</h2>
+                </div>
+
+                <!-- 维度切换标签 -->
+                <div class="flex flex-wrap border-b border-gray-200 mb-6">
+                    <button class="dimension-tab active px-4 py-2 text-sm font-medium border-b-2 border-primary text-primary" data-target="security">国家安全维度</button>
+                    <button class="dimension-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-600 hover:text-primary" data-target="social">社会稳定维度</button>
+                    <button class="dimension-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-600 hover:text-primary" data-target="ideology">意识形态维度</button>
+                    <button class="dimension-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-600 hover:text-primary" data-target="tech">技术监管维度</button>
+                </div>
+
+                <!-- 维度内容 -->
+                <div class="dimension-content" id="security">
+                    <h3 class="text-xl font-bold mb-4 text-primary">2.1 国家安全维度：防范网络攻击与维护主权</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4"><span class="font-semibold">网络安全威胁的现实性和严重性</span>是中国实行网络管理的重要原因。近年来，中国遭受的境外网络攻击呈现出规模大、频率高、技术复杂的特点。</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-neutral p-4 rounded-lg">
+                                <p class="font-semibold mb-2">典型案例1：西北工业大学遭受NSA网络攻击</p>
+                                <p>2022年，西北工业大学遭受美国国家安全局（NSA）网络攻击，攻击者使用了41种网络武器，其中名为"饮茶"的嗅探窃密类网络武器导致大量敏感数据遭窃。</p>
+                            </div>
+                            <div class="bg-neutral p-4 rounded-lg">
+                                <p class="font-semibold mb-2">典型案例2：军工企业网络攻击事件</p>
+                                <p>2024年7月至11月，美国情报机构对中国某通信和卫星互联网领域的军工企业实施网络攻击，入侵控制了300余台设备，定向窃取敏感数据。</p>
+                            </div>
+                            <div class="bg-neutral p-4 rounded-lg">
+                                <p class="font-semibold mb-2">典型案例3：哈尔滨亚冬会网络攻击</p>
+                                <p>2025年1月26日至2月14日期间，哈尔滨亚冬会赛事信息系统遭到来自境外的网络攻击270,167次，攻击主要源自美国及其盟友国家。</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4"><span class="font-semibold">网络空间主权是国家主权的重要组成部分</span>。《国家网络空间安全战略》明确提出："网络空间主权不容侵犯，尊重各国自主选择发展道路、网络管理模式、互联网公共政策和平等参与国际网络空间治理的权利。根据宪法和法律法规管理我国主权范围内的网络活动，保护我国信息设施和信息资源安全，采取包括经济、行政、科技、法律、外交、军事等一切措施，坚定不移地维护我国网络空间主权"。</p>
+                        
+                        <p>从国家安全角度看，中国面临的网络安全挑战主要包括：<span class="font-semibold text-primary">境外黑客组织的有组织攻击</span>、<span class="font-semibold text-primary">西方情报机构的持续渗透</span>、<span class="font-semibold text-primary">关键基础设施的脆弱性</span>等。这些威胁的存在，使得网络管理成为维护国家安全的必要手段。</p>
+                    </div>
+                    
+                    <!-- 网络攻击数据图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">哈尔滨亚冬会期间境外网络攻击来源分布</h4>
+                        <div class="h-64">
+                            <canvas id="cyberAttackChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-content hidden" id="social">
+                    <h3 class="text-xl font-bold mb-4 text-primary">2.2 社会稳定维度：防范虚假信息与维护秩序</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">网络空间的开放性和匿名性为虚假信息、网络谣言的传播提供了便利条件，对社会稳定构成了现实威胁。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">网络谣言的危害不容忽视</span>。福建省公安机关的统计显示，截至2023年7月，全省共侦办网络谣言案件347起，清理网络谣言信息1.7万余条，关停造谣传谣网络账号930个。这些谣言涉及疫情防控、食品安全、社会事件等多个领域，严重扰乱了社会秩序。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">AI技术的滥用加剧了虚假信息传播的风险</span>。中央网信办部署开展的"清朗·整治AI技术滥用"专项行动，重点整治利用AI制作发布谣言、不实信息等突出问题。AI技术可以生成高度逼真的虚假图像、视频和音频，其欺骗性更强，传播速度更快，危害更大。</p>
+                        
+                        <p><span class="font-semibold">网络意识形态安全是社会稳定的重要保障</span>。网络空间已成为不同文化和价值观念交流交融交锋的新阵地，这种态势不仅直接关系到国家文化安全，更对政治安全和社会稳定产生重要影响。面对网络意识形态领域的复杂形势，迫切需要守牢网上阵地，坚决维护网上政治安全和意识形态安全。</p>
+                        
+                        <p class="mt-4">从社会稳定角度看，网络管理的必要性体现在：<span class="font-semibold text-primary">防范虚假信息引发社会恐慌</span>、<span class="font-semibold text-primary">打击网络谣言维护公共秩序</span>、<span class="font-semibold text-primary">抵御有害信息侵蚀主流价值观</span>等方面。</p>
+                    </div>
+                    
+                    <!-- 网络谣言治理成效图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">福建省网络谣言治理成效（截至2023年7月）</h4>
+                        <div class="h-64">
+                            <canvas id="rumorControlChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-content hidden" id="ideology">
+                    <h3 class="text-xl font-bold mb-4 text-primary">2.3 意识形态维度：文化安全与价值观引导</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">在全球化背景下，网络空间成为意识形态斗争的主阵地，文化安全面临前所未有的挑战。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">网络文化的影响力日益增强</span>。互联网已经成为意识形态斗争的主阵地、主战场、最前沿，掌握网络意识形态主导权，就是守护国家的主权和政权。网络文化不仅影响着人们的思想观念，更深刻地塑造着社会价值观。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">文化安全与意识形态安全密切交织</span>。文化是意识形态的重要载体，意识形态是文化安全的核心指引。文化安全的深层结构主要体现在三个维度：主权性（国家对文化资源、话语权及其发展路径的有效掌控）、认同性（社会成员对主流价值观念的广泛认同与文化归属感）、稳定性（文化传播秩序不受外部破坏性干扰的能力）。</p>
+                        
+                        <p><span class="font-semibold">西方意识形态的渗透不容忽视</span>。一些西方国家利用互联网这一新型技术工具对我国意识形态领域进行渗透破坏，试图通过传播西方价值观、历史虚无主义等错误思想，动摇我国的文化根基和价值认同。</p>
+                        
+                        <p class="mt-4">从意识形态角度看，网络管理的重要性在于：<span class="font-semibold text-primary">维护中华文化的主体性和主导地位</span>、<span class="font-semibold text-primary">培育和践行社会主义核心价值观</span>、<span class="font-semibold text-primary">抵御西方意识形态的侵蚀</span>等方面。</p>
+                    </div>
+                    
+                    <!-- 文化安全维度图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">文化安全的三个核心维度</h4>
+                        <div class="h-64">
+                            <canvas id="culturalSecurityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-content hidden" id="tech">
+                    <h3 class="text-xl font-bold mb-4 text-primary">2.4 技术监管维度：数据安全与个人信息保护</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">随着数字经济的快速发展，数据已成为重要的生产要素，数据安全和个人信息保护成为网络治理的核心议题。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">数据安全法体系日趋完善</span>。《网络安全法》《数据安全法》《个人信息保护法》构成了我国数据安全治理的法律基础。《数据安全法》第2条明确将"维护国家安全、公共利益"作为立法目的，《个人信息保护法》第13条规定"为应对突发公共卫生事件，或者紧急情况下为保护自然人的生命健康和财产安全所必需"时无需个体同意即可处理个人信息，均体现了公共利益在数据治理中的优先地位。</p>
+                        
+                        <p class="mb-4"><span class="font-semibold">数据跨境流动管理更加精细化</span>。《促进和规范数据跨境流动规定》明确了多种免予申报的情形：国际贸易、跨境运输、学术合作等活动中不包含个人信息或重要数据的；为订立、履行个人合同（如跨境购物、跨境寄递、跨境汇款等）确需向境外提供个人信息的；累计向境外提供不满10万人个人信息（不含敏感个人信息）的等。</p>
+                        
+                        <p><span class="font-semibold">关键信息基础设施保护得到加强</span>。《关键信息基础设施安全保护条例》明确了关键信息基础设施的定义，包括公共通信和信息服务、能源、交通、水利、金融、公共服务、电子政务、国防科技工业等重要行业和领域的重要网络设施、信息系统等。</p>
+                        
+                        <p class="mt-4">从技术监管角度看，网络管理的必要性体现在：<span class="font-semibold text-primary">保护国家数据主权和数据安全</span>、<span class="font-semibold text-primary">维护公民个人信息权益</span>、<span class="font-semibold text-primary">保障关键信息基础设施安全</span>等方面。</p>
+                    </div>
+                    
+                    <!-- 数据跨境流动规定图表 -->
+                    <div class="bg-neutral rounded-lg p-4 mb-6">
+                        <h4 class="text-lg font-semibold mb-3">数据跨境流动免予申报情形</h4>
+                        <div class="h-64">
+                            <canvas id="dataFlowChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 各方观点部分 -->
+        <section id="opinions" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-comments text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">三、各方观点：多元视角下的网络治理</h2>
+                </div>
+
+                <!-- 观点卡片容器 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- 官方立场卡片 -->
+                    <div class="opinion-card bg-primary/5 rounded-xl p-6 border border-primary/20 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+                                <i class="fa fa-building text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">官方立场</h3>
+                        </div>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-3">中国政府对互联网管理的立场是<span class="font-semibold">明确而一贯的</span>：坚持依法管理，同时积极推进开放合作。</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>网络主权原则是中国网络治理的基石</li>
+                                <li>致力于构建网络空间命运共同体</li>
+                                <li>网络强国战略是中国的发展目标</li>
+                                <li>在国际合作中坚持原则立场</li>
+                            </ul>
+                        </div>
+                        <button class="opinion-detail-btn mt-4 text-primary font-medium flex items-center">
+                            查看详情 <i class="fa fa-chevron-down ml-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- 民间观点卡片 -->
+                    <div class="opinion-card bg-secondary/5 rounded-xl p-6 border border-secondary/20 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center mr-4">
+                                <i class="fa fa-users text-secondary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-secondary">民间观点</h3>
+                        </div>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-3">中国网民对政府网络治理政策的态度呈现出<span class="font-semibold">高度支持</span>的特点，但同时也存在一些不同声音。</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>主流民意支持网络治理（支持率90%以上）</li>
+                                <li>民间存在多元化声音</li>
+                                <li>对开放的期待与理解并存</li>
+                                <li>关注个人信息保护问题</li>
+                            </ul>
+                        </div>
+                        <button class="opinion-detail-btn mt-4 text-secondary font-medium flex items-center">
+                            查看详情 <i class="fa fa-chevron-down ml-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- 国际社会反应卡片 -->
+                    <div class="opinion-card bg-accent/5 rounded-xl p-6 border border-accent/20 hover:shadow-md transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mr-4">
+                                <i class="fa fa-globe text-accent text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-accent">国际社会反应</h3>
+                        </div>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-3">国际社会对中国网络管理政策的反应呈现出<span class="font-semibold">复杂的双重标准</span>。</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>西方的批评与指责</li>
+                                <li>国际比较显示管理的普遍性</li>
+                                <li>中国积极参与国际合作</li>
+                                <li>网络主权理念获得认可</li>
+                            </ul>
+                        </div>
+                        <button class="opinion-detail-btn mt-4 text-accent font-medium flex items-center">
+                            查看详情 <i class="fa fa-chevron-down ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 观点详情面板 -->
+                <div id="opinionDetailPanel" class="hidden bg-neutral rounded-xl p-6">
+                    <div id="officialDetail" class="opinion-detail-content">
+                        <h3 class="text-xl font-bold mb-4 text-primary">3.1 官方立场：依法管理与开放合作并重</h3>
+                        <div class="prose max-w-none text-gray-700 space-y-4">
+                            <p><span class="font-semibold">网络主权原则是中国网络治理的基石</span>。习近平总书记强调"尊重网络主权"，深刻揭示了互联网发展的内在规律。国家主权原则适用于网络空间，是国家在网络空间行使管辖权以维护自身权益的法律前提，为国家依法治网提供了法律依据。</p>
+                            
+                            <p><span class="font-semibold">中国致力于构建网络空间命运共同体</span>。《携手构建网络空间命运共同体》白皮书明确提出，中国将坚持独立自主，坚定不移地维护在网络空间的国家主权、安全、发展利益。中国倡导尊重各国网络主权，尊重各国自主选择网络发展道路、网络管理模式、互联网公共政策和平等参与网络空间国际治理的权利。</p>
+                            
+                            <p><span class="font-semibold">网络强国战略是中国的发展目标</span>。2014年2月，习近平总书记在中央网络安全和信息化领导小组第一次会议上明确提出，"努力把我国建设成为网络强国"。要"提高数字技术基础研发能力，打好关键核心技术攻坚战，尽快实现高水平自立自强，把发展数字经济自主权牢牢掌握在自己手中"。</p>
+                            
+                            <p><span class="font-semibold">在国际合作中坚持原则立场</span>。面对美国等西方国家的指责，中方明确表示："中方发现，美国对华实施了长时间、系统性、大规模的网络攻击，这些攻击包括网络间谍行为，也包括危害中国电信、金融、交通等关键基础设施安全的网络攻击"。中方敦促美方在网络安全问题上采取负责任的态度，停止对中方实施网络攻击，停止对中方无端抹黑和攻击。</p>
+                        </div>
+                    </div>
+
+                    <div id="civilDetail" class="opinion-detail-content hidden">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">3.2 民间观点：理解与期待并存</h3>
+                        <div class="prose max-w-none text-gray-700 space-y-4">
+                            <p>根据多项民调数据，中国网民对政府网络治理政策的态度呈现出<span class="font-semibold">高度支持</span>的特点，但同时也存在一些不同声音。</p>
+                            
+                            <p><span class="font-semibold">主流民意支持网络治理</span>。调查显示，网民对政府各项网络治理行动的支持率均在90%以上。有84.3%的网民表示政府网络治理水平有较大或非常大的提升，80%以上的网民认为"网络充满正能量、网络秩序和舆论环境得到改善"，90.6%的网民"对我国网络的健康规范发展充满信心"。</p>
+                            
+                            <p><span class="font-semibold">民间存在多元化声音</span>。在网络管理政策修订征求意见时，一些网民表达了不同意见。虽然很少有人认为官方会根据公众意见来大幅修改草案内容，但像Lily Wang这样的网民纷纷登陆网站，选择"反对"选项。这些反对声音主要集中在对"个人信息出境"定义的误解，担心"在境外网站注册用户信息就是个人信息出境"、"访问境外服务器就算个人信息出境"。</p>
+                            
+                            <p><span class="font-semibold">对开放的期待与理解并存</span>。一些网民表达了对网络开放的期待，如抖音上有视频称"上海作为开放外网的试点，在小红书之前好长时间我就说过这个事儿，中国的网络必将开放，关键是什么时候决定开放而已。开放是时间早晚的问题，必然开放"。但同时也有网民表示理解："我理解的开放它并不指x开放，我认为它是一个国家或是一个人对万事万物开放包容"。</p>
+                        </div>
+                        
+                        <!-- 网民态度调查图表 -->
+                        <div class="bg-white rounded-lg p-4 mt-6">
+                            <h4 class="text-lg font-semibold mb-3">中国网民对网络治理的态度（民调数据）</h4>
+                            <div class="h-64">
+                                <canvas id="publicOpinionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="internationalDetail" class="opinion-detail-content hidden">
+                        <h3 class="text-xl font-bold mb-4 text-accent">3.3 国际社会反应：批评与借鉴并存</h3>
+                        <div class="prose max-w-none text-gray-700 space-y-4">
+                            <p>国际社会对中国网络管理政策的反应呈现出<span class="font-semibold">复杂的双重标准</span>。</p>
+                            
+                            <p><span class="font-semibold">西方的批评与指责</span>。自2010年初谷歌高调声称"受中国黑客攻击"以来，一些西方国家对中国"网络审查"、"黑客攻击"、"组建网络部队"等的炒作纷纭杂沓，不绝于耳。美国从白宫到国务院，由官至商，发起了针对中国等非西方国家互联网管理的强势攻击，主要集中在两点：一是互联网自由问题，二是网络攻击问题。</p>
+                            
+                            <p><span class="font-semibold">国际比较显示管理的普遍性</span>。事实上，各国都在根据自身国情对网络进行管理。日本通过《个人信息保护法》《网络安全基本法》等构建多层次法律框架，强调数据跨境流动的合规审查；韩国以《网络安全法》《关键基础设施保护法》为核心，引入强制性安全认证制度；欧盟的网络安全法规以《通用数据保护条例》（GDPR）为核心，规定了保护用户数据的要求和对违规者的严厉处罚。</p>
+                            
+                            <p><span class="font-semibold">中国积极参与国际合作</span>。2017年3月1日，中国发布《网络空间国际合作战略》，这是中国为破解全球网络空间治理难题贡献的方案。中国积极参与联合国网络空间治理进程，与上海合作组织其他成员国向联大提交"信息安全国际行为准则"。自2014年以来，中国连续八年在浙江乌镇举办世界互联网大会，搭建中国与世界互联互通的国际平台。</p>
+                        </div>
+                        
+                        <!-- 各国网络管理措施对比图表 -->
+                        <div class="bg-white rounded-lg p-4 mt-6">
+                            <h4 class="text-lg font-semibold mb-3">主要国家网络管理措施对比</h4>
+                            <div class="h-64">
+                                <canvas id="internationalComparisonChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="closeOpinionDetail" class="mt-6 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-300">
+                        关闭详情
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 辩论环节部分 -->
+        <section id="debate" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-balance-scale text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">四、人民疑问与反驳：一场虚拟的网络治理辩论</h2>
+                </div>
+
+                <!-- 辩论轮次选择 -->
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <button class="debate-round-btn active px-6 py-3 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition-colors duration-300" data-round="1">
+                        第一轮：开放必要性之争
+                    </button>
+                    <button class="debate-round-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-300" data-round="2">
+                        第二轮：安全与自由的平衡
+                    </button>
+                    <button class="debate-round-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-300" data-round="3">
+                        第三轮：国际比较与中国特色
+                    </button>
+                    <button class="debate-round-btn px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-300" data-round="4">
+                        第四轮：技术发展与管理创新
+                    </button>
+                </div>
+
+                <!-- 辩论内容区域 -->
+                <div class="debate-content" id="debate1">
+                    <div class="bg-neutral rounded-xl p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center mr-3">
+                                <i class="fa fa-microphone text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-700">主持人</h3>
+                        </div>
+                        <p class="text-gray-700 pl-11">各位听众朋友们，欢迎来到今天的《网络治理大家谈》节目。今天我们邀请了两位嘉宾：来自网络安全研究机构的李教授和关注网络自由的张先生。让我们先从第一个问题开始。</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">我想先问一个问题，为什么中国不能完全开放使用国际网络？这不是违背了互联网自由开放的精神吗？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">您这个问题本身就存在误解。中国并非"不能开放"，而是在保障安全的前提下<span class="font-semibold text-green-700">有序开放</span>。中国早在1994年就接入了国际互联网，成为第77个接入国。截至2024年，中国网民规模已达10.9亿，互联网普及率超过78%。我们的网络是开放的，只是需要管理。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但为什么要管理呢？互联网的魅力不就在于自由连接吗？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">恰恰相反，<span class="font-semibold text-green-700">没有秩序的自由不是真正的自由</span>。您知道吗？2025年1月至2月，哈尔滨亚冬会赛事信息系统遭到境外网络攻击270,167次，攻击主要来自荷兰、美国、泰国等国。如果完全开放，这些攻击可能导致整个赛事系统瘫痪。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但这只是个别案例啊。大部分情况下，普通网民只是想获取信息、了解世界。</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">这正是我们要保护的。中国的网络管理不是要阻断信息流动，而是要<span class="font-semibold text-green-700">过滤有害信息</span>。比如，我们每年都要清理大量的网络谣言、虚假信息、色情暴力内容。福建省的数据显示，仅2023年上半年就清理网络谣言信息1.7万余条。如果没有管理，这些有害信息会严重影响青少年的健康成长。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debate-content hidden" id="debate2">
+                    <div class="bg-neutral rounded-xl p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center mr-3">
+                                <i class="fa fa-microphone text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-700">主持人</h3>
+                        </div>
+                        <p class="text-gray-700 pl-11">好，现在进入第二轮辩论。让我们听听双方对国家安全与信息自由平衡的看法。</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">我理解国家安全的重要性，但过度的管理会阻碍信息流通，影响科技创新和国际交流。比如，科研人员想要查阅国外的学术论文都很困难。</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">您这个观点需要纠正。中国对科研领域的国际交流一直是<span class="font-semibold text-green-700">积极支持</span>的。《促进和规范数据跨境流动规定》明确指出，学术合作活动中不包含个人信息或重要数据的，可以免予申报数据出境安全评估。而且，我们已经建立了完善的学术资源共享机制，如国家科技图书文献中心、中国知网等，能够满足科研需求。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但很多国外最新的研究成果还是看不到啊。</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">您可能不了解，中国已经与多个国际学术机构建立了合作关系。比如，中国科技论文在线已经与Elsevier、Springer等国际出版商开展合作，能够获取最新的学术资源。同时，我们也在加快自主创新，2024年中国科技论文被引用次数已经位居世界第二。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">那为什么还要限制访问一些国外网站呢？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">这正是为了<span class="font-semibold text-green-700">保护国家利益</span>。美国情报机构对中国的网络攻击从未停止。2024年7月至11月，美国情报机构对中国某通信和卫星互联网领域的军工企业实施网络攻击，入侵控制了300余台设备，定向窃取了大量敏感数据。如果完全开放，类似的攻击会更加频繁和严重。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debate-content hidden" id="debate3">
+                    <div class="bg-neutral rounded-xl p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center mr-3">
+                                <i class="fa fa-microphone text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-700">主持人</h3>
+                        </div>
+                        <p class="text-gray-700 pl-11">现在进入第三轮辩论，让我们看看国际比较的视角。</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">我不明白，为什么美国、欧洲都可以自由上网，中国却要搞特殊？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">您这个观点存在严重的<span class="font-semibold text-green-700">信息不对称</span>。事实上，世界上没有任何一个国家的网络是完全开放的。美国有严格的网络监控体系，NSA的"棱镜计划"监听全球；欧盟有GDPR，对数据跨境流动设置了严格限制；日本有《个人信息保护法》，韩国有《网络安全法》，都在对网络进行管理。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但他们的管理似乎没有中国这么严格啊。</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">这是因为各国的国情不同。中国有14亿人口，是世界上最大的发展中国家和网民数量最多的国家。如果没有有效的管理，虚假信息、网络暴力、色情内容等会像洪水一样泛滥，后果不堪设想。我们的管理是基于中国国情的<span class="font-semibold text-green-700">必要选择</span>。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但这种管理会不会影响中国的国际形象？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">恰恰相反，中国在网络治理方面的经验正在获得越来越多国家的认可。中国倡导的"网络主权"理念已经被写入联合国相关文件。中国连续举办的世界互联网大会也成为全球互联网治理的重要平台。我们提出的"构建网络空间命运共同体"理念，得到了国际社会的广泛响应。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debate-content hidden" id="debate4">
+                    <div class="bg-neutral rounded-xl p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center mr-3">
+                                <i class="fa fa-microphone text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-700">主持人</h3>
+                        </div>
+                        <p class="text-gray-700 pl-11">现在进入最后一轮辩论，让我们探讨一下技术发展与管理创新的关系。</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">我担心过度的管理会阻碍技术创新。比如，很多创新的互联网应用都需要与国际接轨。</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">您这个担心是多余的。中国的互联网创新能力是有目共睹的。从电商到移动支付，从短视频到人工智能，中国在很多领域都处于世界领先地位。2024年，中国数字经济规模达到50.2万亿元，占GDP比重超过40%。这些成就的取得，正是在有效管理下实现的。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">但为什么一些国外的应用在中国无法使用？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">这是因为这些应用可能存在<span class="font-semibold text-green-700">安全隐患</span>或不符合中国法律。比如，一些社交平台可能被用于传播有害信息、组织非法活动。我们的管理是为了保护用户的合法权益，维护网络空间的良好秩序。</p>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user text-blue-500"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-blue-700">张先生（开放派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">那未来中国会完全开放网络吗？</p>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-user-circle text-green-600"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-green-700">李教授（管理派）</h4>
+                            </div>
+                            <p class="text-gray-700 pl-11">中国的大门不会关上，也不会关小。我们会在保障安全的前提下，<span class="font-semibold text-green-700">逐步扩大开放</span>。《促进和规范数据跨境流动规定》的出台就是一个积极信号。未来，随着技术的进步和管理能力的提升，中国的网络会更加开放、更加安全、更加便利。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据与案例部分 -->
+        <section id="data" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-bar-chart text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">五、数据与案例：用事实说话</h2>
+                </div>
+
+                <!-- 数据案例选项卡 -->
+                <div class="flex flex-wrap border-b border-gray-200 mb-6">
+                    <button class="data-tab active px-4 py-2 text-sm font-medium border-b-2 border-primary text-primary" data-target="threats">网络安全威胁</button>
+                    <button class="data-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-600 hover:text-primary" data-target="effects">治理成效</button>
+                    <button class="data-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-600 hover:text-primary" data-target="cooperation">国际合作</button>
+                </div>
+
+                <!-- 数据内容 -->
+                <div class="data-content" id="threats">
+                    <h3 class="text-xl font-bold mb-4 text-primary">5.1 网络安全威胁的严峻现实</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">为了让大家更直观地了解网络安全威胁的严重性，我们来看一些具体的数据和案例：</p>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">境外网络攻击规模惊人</h4>
+                                <p class="mb-3">2025年1月至2月的哈尔滨亚冬会期间，赛事信息系统遭到来自境外的网络攻击270,167次。其中，荷兰发起攻击3798万次，美国1179万次，泰国72万次。这些数字背后，是境外势力对中国网络空间的持续渗透和攻击。</p>
+                                <div class="h-64 mt-4">
+                                    <canvas id="winterGamesAttackChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">关键基础设施面临的威胁</h4>
+                                <p>2024年7月至11月，美国情报机构对中国某通信和卫星互联网领域的军工企业实施网络攻击，攻击者通过位于罗马尼亚、荷兰等多个国家的跳板IP，利用未授权访问漏洞及SQL注入漏洞攻击该企业电子文件系统，入侵控制了300余台设备，定向窃取"军专网"、"核心网"等敏感数据。</p>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">网络犯罪的危害巨大</h4>
+                                <p>2025年5月，贵州某单位政务服务系统遭网络攻击，被涉诈犯罪嫌疑人利用，造成群众财产损失400余万元。江苏苏州吴江某公司建设的短信群发系统被攻击冒用，发送诈骗短信27000余条。这些案例充分说明，网络安全威胁就在我们身边。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-content hidden" id="effects">
+                    <h3 class="text-xl font-bold mb-4 text-primary">5.2 网络治理的成效</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">中国的网络治理取得了显著成效，让我们用数据来说话：</p>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">网络谣言治理成效显著</h4>
+                                <p class="mb-3">福建省公安机关的统计显示，截至2023年7月，全省共侦办网络谣言案件347起，清理网络谣言信息1.7万余条，关停造谣传谣网络账号930个。这些数字背后，是网络空间环境的持续改善。</p>
+                                <div class="h-64 mt-4">
+                                    <canvas id="fujianRumorChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">网民满意度不断提升</h4>
+                                <p class="mb-3">多项调查显示，84.3%的网民表示政府网络治理水平有较大或非常大的提升，80%以上的网民认为"网络充满正能量、网络秩序和舆论环境得到改善"，90.6%的网民"对我国网络的健康规范发展充满信心"。</p>
+                                <div class="h-64 mt-4">
+                                    <canvas id="satisfactionChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">网络基础设施快速发展</h4>
+                                <p>截至2024年，中国网民规模已达10.9亿，互联网普及率超过78%。5G基站数量超过300万个，占全球60%以上。中国已经建成了全球最大的5G网络和光纤网络。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-content hidden" id="cooperation">
+                    <h3 class="text-xl font-bold mb-4 text-primary">5.3 国际合作的积极成果</h3>
+                    <div class="prose max-w-none text-gray-700 mb-6">
+                        <p class="mb-4">中国在网络空间国际合作方面也取得了丰硕成果：</p>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">世界互联网大会成为重要平台</h4>
+                                <p>自2014年以来，中国连续举办世界互联网大会，搭建了中国与世界互联互通的国际平台。2022年，世界互联网大会国际组织在北京成立，标志着这一平台的国际化程度进一步提升。</p>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">网络主权理念获得国际认可</h4>
+                                <p>中国倡导的"网络主权"理念已经被写入联合国相关文件。2015年，中国与上海合作组织其他成员国向联大提交的"信息安全国际行为准则"，成为国际上第一份系统阐述网络空间行为规范的文件。</p>
+                            </div>
+                            
+                            <div class="bg-neutral p-5 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3 text-primary">数据跨境流动机制不断完善</h4>
+                                <p class="mb-3">《促进和规范数据跨境流动规定》的实施，为国际贸易、跨境运输、学术合作等活动提供了便利。规定明确了多种免予申报的情形，体现了中国在数据治理方面的开放态度。</p>
+                                <div class="h-64 mt-4">
+                                    <canvas id=dataCooperationChart></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结语部分 -->
+        <section id="conclusion" class="mb-16 section-fade">
+            <div class="bg-white rounded-xl shadow-md p-6 sm:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                        <i class="fa fa-flag-checkered text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">六、结语：理性看待网络治理</h2>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">6.1 播客总结</h3>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-4">各位听众，今天的辩论到这里就要结束了。通过这场辩论，我们可以得出以下几个重要结论：</p>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <p class="font-semibold text-primary">第一，中国的网络并非不开放，而是有序开放</p>
+                                    <p>从1994年接入国际互联网至今，中国已经成为全球最大的互联网市场之一。我们的管理不是为了封闭，而是为了更好地开放。</p>
+                                </div>
+                                
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <p class="font-semibold text-primary">第二，网络安全是国家安全的重要组成部分</p>
+                                    <p>面对日益严峻的网络安全威胁，有效的管理是必要的。保护网络安全就是保护人民的生命财产安全，就是维护国家的主权和尊严。</p>
+                                </div>
+                                
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <p class="font-semibold text-primary">第三，各国都在进行网络管理，中国的做法符合国际惯例</p>
+                                    <p>美国、欧盟、日本、韩国等都有自己的网络管理体系。中国的管理是基于国情的理性选择，得到了广大网民的支持。</p>
+                                </div>
+                                
+                                <div class="bg-primary/5 p-4 rounded-lg">
+                                    <p class="font-semibold text-primary">第四，开放与安全并非对立，而是可以实现平衡</p>
+                                    <p>中国正在通过技术创新、制度完善、国际合作等多种方式，努力实现网络空间的开放与安全的统一。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">6.2 温和提示</h3>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-4">最后，我想对本次播客的内容做一些说明。由于话题的敏感性，我们在内容选择上进行了<span class="font-semibold">严格的筛选</span>，所有引用的数据和案例都来自官方公开渠道，避免了可能引起争议的敏感内容。我们的目的不是为了争论孰是孰非，而是希望通过理性的讨论，让大家对中国的网络治理有更深入的了解。</p>
+                            
+                            <p class="mb-4">网络治理是一个复杂的系统工程，需要政府、企业、社会组织和个人的共同参与。中国的网络治理之路还在继续，我们相信，随着技术的进步和制度的完善，中国的网络空间会更加安全、更加开放、更加美好。</p>
+                            
+                            <p>感谢大家的收听，我们下期再见！</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral p-5 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-primary">后记</h3>
+                        <div class="prose max-w-none text-gray-700">
+                            <p>在制作本期播客的过程中，我们确实遇到了一些敏感内容需要规避的情况。比如，涉及具体的网络攻击事件细节、某些敏感的政治讨论、以及一些可能引起国际争议的表述等。我们选择了用更温和、更客观的方式来呈现相关内容，确保播客能够顺利播出，同时也希望能够为听众提供有价值的信息。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fa fa-globe text-primary text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold">中国互联网跨境信息管理政策研究</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">理性分析 · 客观呈现 · 深度解读</p>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    <p>© 2025 中国互联网政策研究中心</p>
+                    <p class="mt-1">基于官方公开信息整理分析，仅供参考</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 移动端菜单切换
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 历史时间线切换
+            const timelineBtns = document.querySelectorAll('.timeline-btn');
+            const timelineContents = document.querySelectorAll('.timeline-content');
+            
+            timelineBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // 更新按钮样式
+                    timelineBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-600');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-600');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    // 显示对应内容
+                    timelineContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(target).classList.remove('hidden');
+                });
+            });
+
+            // 多维度分析标签切换
+            const dimensionTabs = document.querySelectorAll('.dimension-tab');
+            const dimensionContents = document.querySelectorAll('.dimension-content');
+            
+            dimensionTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // 更新标签样式
+                    dimensionTabs.forEach(t => {
+                        t.classList.remove('border-primary', 'text-primary');
+                        t.classList.add('border-transparent', 'text-gray-600');
+                    });
+                    this.classList.remove('border-transparent', 'text-gray-600');
+                    this.classList.add('border-primary', 'text-primary');
+                    
+                    // 显示对应内容
+                    dimensionContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(target).classList.remove('hidden');
+                });
+            });
+
+            // 各方观点详情切换
+            const opinionCards = document.querySelectorAll('.opinion-card');
+            const opinionDetailPanel = document.getElementById('opinionDetailPanel');
+            const opinionDetailContents = document.querySelectorAll('.opinion-detail-content');
+            const closeOpinionDetail = document.getElementById('closeOpinionDetail');
+            
+            opinionCards.forEach((card, index) => {
+                const detailBtn = card.querySelector('.opinion-detail-btn');
+                
+                detailBtn.addEventListener('click', function() {
+                    // 显示详情面板
+                    opinionDetailPanel.classList.remove('hidden');
+                    
+                    // 隐藏所有详情内容
+                    opinionDetailContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // 显示对应详情内容
+                    if (index === 0) {
+                        document.getElementById('officialDetail').classList.remove('hidden');
+                    } else if (index === 1) {
+                        document.getElementById('civilDetail').classList.remove('hidden');
+                    } else if (index === 2) {
+                        document.getElementById('internationalDetail').classList.remove('hidden');
+                    }
+                    
+                    // 滚动到详情面板
+                    opinionDetailPanel.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // 关闭详情面板
+            closeOpinionDetail.addEventListener('click', function() {
+                opinionDetailPanel.classList.add('hidden');
+            });
+
+            // 辩论轮次切换
+            const debateRoundBtns = document.querySelectorAll('.debate-round-btn');
+            const debateContents = document.querySelectorAll('.debate-content');
+            
+            debateRoundBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const round = this.getAttribute('data-round');
+                    
+                    // 更新按钮样式
+                    debateRoundBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-white', 'shadow');
+                        b.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-primary', 'text-white', 'shadow');
+                    
+                    // 显示对应辩论内容
+                    debateContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById('debate' + round).classList.remove('hidden');
+                });
+            });
+
+            // 数据案例选项卡切换
+            const dataTabs = document.querySelectorAll('.data-tab');
+            const dataContents = document.querySelectorAll('.data-content');
+            
+            dataTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // 更新标签样式
+                    dataTabs.forEach(t => {
+                        t.classList.remove('border-primary', 'text-primary');
+                        t.classList.add('border-transparent', 'text-gray-600');
+                    });
+                    this.classList.remove('border-transparent', 'text-gray-600');
+                    this.classList.add('border-primary', 'text-primary');
+                    
+                    // 显示对应内容
+                    dataContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(target).classList.remove('hidden');
+                });
+            });
+
+            // 返回顶部按钮
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+                
+                // 滚动动画
+                const sections = document.querySelectorAll('.section-fade');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (sectionTop < windowHeight * 0.85) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // 关闭移动端菜单
+                        mobileMenu.classList.add('hidden');
+                        
+                        // 滚动到目标位置
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 初始化图表
+            initCharts();
+        });
+
+        // 初始化所有图表
+        function initCharts() {
+            // 1994-1999年中国网络政策分布图表
+            const policyChart1 = new Chart(
+                document.getElementById('policyChart1'),
+                {
+                    type: 'pie',
+                    data: {
+                        labels: ['网络技术标准与安全政策', '网络基础建设和发展政策', '其他政策'],
+                        datasets: [{
+                            data: [61.1, 27.8, 11.1],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.raw + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 2001-2010年中国网络政策分布图表
+            const policyChart2 = new Chart(
+                document.getElementById('policyChart2'),
+                {
+                    type: 'pie',
+                    data: {
+                        labels: ['安全领域政策', '发展领域政策'],
+                        datasets: [{
+                            data: [62.7, 37.3],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.raw + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 中国网络安全法律框架演进图表
+            const legalFrameworkChart = new Chart(
+                document.getElementById('legalFrameworkChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: ['2016年《网络安全法》', '2021年《数据安全法》', '2021年《个人信息保护法》', '2024年《网络数据安全管理条例》', '2024年《促进和规范数据跨境流动规定》'],
+                        datasets: [{
+                            label: '法律框架完善度',
+                            data: [70, 85, 90, 95, 98],
+                            backgroundColor: '#165DFF',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: '完善度评分'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 哈尔滨亚冬会期间境外网络攻击来源分布图表
+            const cyberAttackChart = new Chart(
+                document.getElementById('cyberAttackChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: ['荷兰', '美国', '泰国', '其他国家'],
+                        datasets: [{
+                            label: '攻击次数（万次）',
+                            data: [3798, 1179, 72, 251],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1',
+                                '#F5A623'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '攻击次数（万次）'
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 福建省网络谣言治理成效图表
+            const rumorControlChart = new Chart(
+                document.getElementById('rumorControlChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: ['侦办网络谣言案件（起）', '清理网络谣言信息（千条）', '关停造谣传谣账号（个）'],
+                        datasets: [{
+                            label: '数量',
+                            data: [347, 17, 930],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 文化安全的三个核心维度图表
+            const culturalSecurityChart = new Chart(
+                document.getElementById('culturalSecurityChart'),
+                {
+                    type: 'radar',
+                    data: {
+                        labels: ['主权性', '认同性', '稳定性'],
+                        datasets: [{
+                            label: '当前水平',
+                            data: [85, 78, 82],
+                            backgroundColor: 'rgba(22, 93, 255, 0.2)',
+                            borderColor: '#165DFF',
+                            pointBackgroundColor: '#165DFF',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#165DFF'
+                        }, {
+                            label: '目标水平',
+                            data: [95, 90, 95],
+                            backgroundColor: 'rgba(54, 207, 201, 0.2)',
+                            borderColor: '#36CFC9',
+                            pointBackgroundColor: '#36CFC9',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#36CFC9'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    display: true
+                                },
+                                suggestedMin: 50,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 数据跨境流动免予申报情形图表
+            const dataFlowChart = new Chart(
+                document.getElementById('dataFlowChart'),
+                {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            '国际贸易、跨境运输、学术合作（无敏感数据）',
+                            '订立、履行个人合同所需',
+                            '累计提供不满10万人个人信息（非敏感）',
+                            '其他免予申报情形'
+                        ],
+                        datasets: [{
+                            data: [40, 30, 20, 10],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1',
+                                '#F5A623'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    boxWidth: 12,
+                                    padding: 15
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 中国网民对网络治理的态度图表
+            const publicOpinionChart = new Chart(
+                document.getElementById('publicOpinionChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            '认为政府网络治理水平有较大提升',
+                            '认为网络充满正能量、秩序改善',
+                            '对网络健康规范发展充满信心'
+                        ],
+                        datasets: [{
+                            label: '支持率（%）',
+                            data: [84.3, 80, 90.6],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: '支持率（%）'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 主要国家网络管理措施对比图表
+            const internationalComparisonChart = new Chart(
+                document.getElementById('internationalComparisonChart'),
+                {
+                    type: 'radar',
+                    data: {
+                        labels: [
+                            '数据跨境流动管理',
+                            '个人信息保护',
+                            '关键基础设施保护',
+                            '网络安全立法',
+                            '内容监管'
+                        ],
+                        datasets: [{
+                            label: '中国',
+                            data: [85, 90, 95, 88, 82],
+                            backgroundColor: 'rgba(22, 93, 255, 0.2)',
+                            borderColor: '#165DFF',
+                            pointBackgroundColor: '#165DFF'
+                        }, {
+                            label: '美国',
+                            data: [75, 80, 98, 85, 70],
+                            backgroundColor: 'rgba(245, 166, 35, 0.2)',
+                            borderColor: '#F5A623',
+                            pointBackgroundColor: '#F5A623'
+                        }, {
+                            label: '欧盟',
+                            data: [95, 98, 85, 90, 75],
+                            backgroundColor: 'rgba(54, 207, 201, 0.2)',
+                            borderColor: '#36CFC9',
+                            pointBackgroundColor: '#36CFC9'
+                        }, {
+                            label: '日本',
+                            data: [80, 88, 82, 85, 78],
+                            backgroundColor: 'rgba(114, 46, 209, 0.2)',
+                            borderColor: '#722ED1',
+                            pointBackgroundColor: '#722ED1'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    display: true
+                                },
+                                suggestedMin: 50,
+                                suggestedMax: 100
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 哈尔滨亚冬会网络攻击图表
+            const winterGamesAttackChart = new Chart(
+                document.getElementById('winterGamesAttackChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: ['荷兰', '美国', '泰国', '其他国家'],
+                        datasets: [{
+                            label: '攻击次数（万次）',
+                            data: [3798, 1179, 72, 251],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1',
+                                '#F5A623'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: '攻击次数（万次）'
+                                }
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 福建省网络谣言治理图表
+            const fujianRumorChart = new Chart(
+                document.getElementById('fujianRumorChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: ['侦办案件（起）', '清理信息（千条）', '关停账号（个）'],
+                        datasets: [{
+                            label: '数量',
+                            data: [347, 17, 930],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 网民满意度图表
+            const satisfactionChart = new Chart(
+                document.getElementById('satisfactionChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            '认为治理水平有较大提升',
+                            '认为网络充满正能量',
+                            '对网络发展充满信心'
+                        ],
+                        datasets: [{
+                            label: '比例（%）',
+                            data: [84.3, 80, 90.6],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1'
+                            ],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: '比例（%）'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+
+            // 国际合作成果图表
+            const dataCooperationChart = new Chart(
+                document.getElementById('dataCooperationChart'),
+                {
+                    type: 'pie',
+                    data: {
+                        labels: [
+                            '国际贸易数据流动',
+                            '跨境运输数据流动',
+                            '学术合作数据流动',
+                            '个人合同数据流动',
+                            '其他类型数据流动'
+                        ],
+                        datasets: [{
+                            data: [35, 25, 20, 15, 5],
+                            backgroundColor: [
+                                '#165DFF',
+                                '#36CFC9',
+                                '#722ED1',
+                                '#F5A623',
+                                '#F7BA1E'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right'
+                            }
+                        }
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>
